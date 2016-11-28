@@ -58,11 +58,13 @@ class FingerprintAndroid {
 }
 
 //add all available functions from the native module (besides authenticate)
-Object.keys(FingerprintAndroidNative).forEach(key => {
-    if (OVERRIDDEN_METHODS.indexOf(key) === -1) {
-        FingerprintAndroid[key] = FingerprintAndroidNative[key];
-    }
-});
+if (FingerprintAndroidNative) {
+    Object.keys(FingerprintAndroidNative).forEach(key => {
+        if (OVERRIDDEN_METHODS.indexOf(key) === -1) {
+            FingerprintAndroid[key] = FingerprintAndroidNative[key];
+        }
+    });
+}
 
 
 export default FingerprintAndroid;
