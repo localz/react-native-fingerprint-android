@@ -1,3 +1,3 @@
-import FingerprintAndroid from './FingerprintAndroid';
+import fingerprintAndroid from './fingerprintAndroid';
 
-export default FingerprintAndroid;
+export default fingerprintAndroid;
